@@ -1,6 +1,7 @@
 import { Card, CardMedia, CardContent, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Person, Status } from '../util/type';
+import useTitle from '../util/useTitle';
 
 export async function fetchData<T>(
   url: string,
@@ -23,11 +24,9 @@ export async function fetchData<T>(
 function PersonPage() {
   const [status, setStatus] = useState<Status>('pending');
   const [personData, setPersonData] = useState<Person>(null as unknown as Person);
+  useTitle('Snap - Person');
 
   useEffect(() => {
-    // I'm aware of the fact that there's a useTitle util function
-    // but it seems like it gets overwritted by the one in the App Component
-    document.title = 'Snap - Person';
     fetchData<Person>('https://randomuser.me/api/', setPersonData, setStatus);
   }, []);
 

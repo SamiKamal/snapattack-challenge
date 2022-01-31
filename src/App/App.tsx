@@ -2,13 +2,10 @@ import logo from '../logo.png';
 import { Box } from '@mui/material';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from '../Home';
-import useTitle from '../util/useTitle';
 import AppBar from '../AppBar';
 import Person from '../Person';
 
 function App() {
-  useTitle('SnapAttack - Coding Challenge - Index');
-
   return (
     <>
       <AppBar />
