@@ -1,0 +1,6 @@
+{
+  "short_name": "code challenge",
+  "name": "SnapAttack Coding Challenge",
+  "start_url": ".",
+  "display": "standalone"
+}
